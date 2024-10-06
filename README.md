@@ -14,3 +14,14 @@ Napisz funkcję search, która wyszukuje film lub serial po jego tytule.
 Napisz funkcję generate_views, która losowo wybiera element z biblioteki, a następnie dodaje mu losową (z zakresu od 1 do 100) ilość odtworzeń.
 Napisz funkcję, która uruchomi generate_views 10 razy.
 Napisz funkcję top_titles(), która zwróci wybraną ilość najpopularniejszych tytułów z biblioteki. Dla chętnych: dodaj do funkcji parametr content_type, którym wybierzesz czy mają zostać pokazane filmy, czy seriale.
+
+## dodatkowo (chętni)
+Napisz funkcję, która za pomocą pętli dodaje pełne sezony seriali do biblioteki. Funkcja powinna przyjmować parametry takie jak: tytuł serialu, rok wydania, gatunek, numer sezonu, liczba odcinków do dodania.
+Do klasy reprezentującej serial, dopisz funkcję zewnętrzną, która wyświetla liczbę odcinków danego serialu dostępnych w bibliotece.
+
+**Niech program po uruchomieniu działa w następujący sposób:
+Wyświetli na konsoli komunikat Biblioteka filmów.
+Wypełni bibliotekę treścią.
+Wygeneruje odtworzenia treści za pomocą funkcji generate_views.
+Wyświetli na konsoli komunikat Najpopularniejsze filmy i seriale dnia <data>, gdzie <data> to bieżąca data w formacie DD.MM.RRRR.
+Wyświetli listę top 3 najpopularniejszych tytułów.***
