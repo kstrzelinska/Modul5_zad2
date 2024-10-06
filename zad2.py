@@ -75,6 +75,10 @@ def top_titles(lista, count=5, content_type=None):
     return sorted_titles[:count]
 
 
+#Wyświetli na konsoli komunikat Biblioteka filmów.
+print("Biblioteka filmów")  
+    
+#Wypełni bibliotekę treścią.
 #jedna lista dla filmów i seriali
 lista = []
 #dodanie przykładowych filmów do listy
@@ -82,6 +86,26 @@ lista.append(Film("Pulp Fiction", 1994, "Crime"))
 lista.append(Film("Inception", 2010, "Sci-Fi"))
 lista.append(Serial("The Simpsons", 1989, "Animation", 5, 1))  # S01E05
 lista.append(Serial("Friends", 1994, "Comedy", 12, 5))  # S05E12
+
+for item in lista:
+    item.play()  # Zwiększenie liczby odtworzeń o 1
+    print(item)  # Wyświetlenie informacji o filmie lub serialu
+
+#Wygeneruje odtworzenia treści za pomocą funkcji generate_views
+print("\nWywołanie funkcji generate_views 10 razy, aby przetestować działanie:")
+for _ in range(10):
+    generate_views(lista)  
+
+#Wyświetli na konsoli komunikat Najpopularniejsze filmy i seriale dnia <data>, gdzie <data> to bieżąca data w formacie DD.MM.RRRR
+from datetime import datetime
+today_date = datetime.today()
+formatted_date = today_date.strftime('%d.%m.%Y')
+print("\nNajpopularniejsze filmy i seriale dnia", formatted_date, ":")
+top_items = top_titles(lista, count=3)  # Najpopularniejsze 3 filmy
+for item in top_items:
+    print(item)
+
+""" SPRAWDZENIE PRZYKŁADY
 
 # Odtwarzanie i wyświetlanie filmów oraz seriali
 print("Lista filmów i seriali")
@@ -134,5 +158,4 @@ print("Najpopularniejsze filmy:")
 top_films = top_titles(lista, count=2, content_type='film')  # Najpopularniejsze 2 filmy
 for film in top_films:
     print(film)
-
-
+"""
